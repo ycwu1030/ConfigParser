@@ -22,12 +22,10 @@ public:
         std::istringstream istr(val);
         T returnVal;
         if (!(istr >> returnVal)) {
-            exitWithError("ConfigParser: Not a valid " + static_cast<std::string> typeid(T).name() + " received!\n");
+            exitWithError("ConfigParser: Not a valid " + static_cast<std::string>(typeid(T).name()) + " received!\n");
         }
         return returnVal;
     }
-
-    static std::string string_to_T(std::string const &val) { return val; }
 };
 };  // namespace config_parser
 
