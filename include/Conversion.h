@@ -2,6 +2,7 @@
 #include <sstream>
 #include <string>
 
+namespace config_parser {
 class Convert {
 public:
     template <typename T>
@@ -23,3 +24,4 @@ public:
 
     static std::string string_to_T(std::string const &val) { return val; }
 };
+};  // namespace config_parser
