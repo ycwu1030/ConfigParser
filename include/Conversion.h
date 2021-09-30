@@ -1,8 +1,13 @@
+#ifndef __CONVERSION__
+#define __CONVERSION__
+
 #include <iostream>
 #include <sstream>
 #include <string>
 
 namespace config_parser {
+void exitWithError(const std::string &err_msg);
+
 class Convert {
 public:
     template <typename T>
@@ -25,3 +30,5 @@ public:
     static std::string string_to_T(std::string const &val) { return val; }
 };
 };  // namespace config_parser
+
+#endif  //__CONVERSION__
