@@ -1,0 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12 FATAL_ERROR)
+
+ADD_EXECUTABLE(ParserTest config_parser_test.cpp)
+TARGET_LINK_LIBRARIES(ParserTest ${ConfigParser_LIBRARY})
