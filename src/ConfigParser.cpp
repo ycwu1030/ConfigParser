@@ -106,4 +106,10 @@ void ConfigParser::Parse_File(const std::string &fName) {
     conf_file.close();
 }
 
+void ConfigParser::Print_Config() const {
+    for (auto &&inter : contents) {
+        std::cout << "<" << inter.first << ">:<" << inter.second << ">" << std::endl;
+    }
+}
+
 }  // namespace config_parser

@@ -34,6 +34,8 @@ public:
 
     void Parse_File(const std::string &fName);
 
+    void Print_Config() const;
+
     template <typename ValueType>
     ValueType Get_Value(const std::string &key, ValueType const &defaultValue = ValueType()) const {
         if (!Has_Key(key)) {
